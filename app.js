@@ -1,8 +1,14 @@
 const http = require("http");
-const reqHandler = require("./routes");
+const express = require("express");
 
-const server = http.createServer(reqHandler);
+const app = express();
 
-server.listen(3000, () => {
-  console.log(`Starting server on http://localhost:3000`);
+app.use((req, res, next) => {
+  next();
 });
+
+app.use((req, res, next) => {
+  res.send("<h1>In the middleware</h1>");
+});
+
+app.listen(3000);
