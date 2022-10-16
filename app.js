@@ -1,5 +1,5 @@
 // Importing NodeJs Core Modules
-const http = require("http");
+// const http = require("http");
 const path = require("path");
 
 // Importing third -party applications
@@ -8,8 +8,10 @@ const bodyParser = require("body-parser");
 // const expressHbs = require("express-handlebars");
 
 // Local files imports
-const adminData = require("./routes/admin");
+// const adminData = require("./routes/admin");
+const adminRoutes = require("./routes/admin");
 const shopRoute = require("./routes/shop");
+const errorController = require("./controllers/error");
 
 const app = express();
 
@@ -33,14 +35,9 @@ app.set("views", "views");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/admin", adminData.routes);
+// app.use("/admin", adminData.routes);
+app.use("/admin", adminRoutes);
 app.use(shopRoute);
-
-app.use((req, res, next) => {
-  // res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
-  res.status(404).render("404", {
-    pageTitle: "404 | Page Not Found",
-  });
-});
+app.use("*", errorController.errorPage);
 
 app.listen(3000);
