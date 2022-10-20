@@ -38,6 +38,6 @@ app.use(express.static(path.join(__dirname, "public")));
 // app.use("/admin", adminData.routes);
 app.use("/admin", adminRoutes);
 app.use(shopRoute);
-app.use("*", errorController.errorPage);
+app.use(errorController.errorPage);
 
 app.listen(3000);
