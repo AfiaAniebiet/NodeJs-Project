@@ -1,1 +1,14 @@
-[{"title":"Hometown Struggles"},{"title":"Who killed Junkie?"},{"title":"The Great Warehouse"},{"title":"Who Made the Druids"},{"title":"First Architect"},{"title":"Bring the Cardigan"},{"title":"Rest APIs"},{"title":"Cardigan"}]
+[
+  {
+    "title": "Candor of Beautiful Trees",
+    "imageUrl": "https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/WOPA160517_D056-resized.jpg?crop=864%2C0%2C1728%2C2304&wid=600&hei=800&scl=2.88",
+    "description": "It is a product that have been carefully crafted and designed to specifically meet your daily needs.",
+    "price": "45"
+  },
+  {
+    "title": "The Beauty of CSS",
+    "imageUrl": "https://images.pexels.com/photos/15286/pexels-photo.jpg?cs=srgb&dl=pexels-luis-del-r%C3%ADo-15286.jpg&fm=jpg",
+    "description": "CSS - Cascading Style Sheet is a useful tool in the world of Web technology. It is a must have skill set for the Frontend developers. It is used to add beauty to the web pages!",
+    "price": "25"
+  }
+]
