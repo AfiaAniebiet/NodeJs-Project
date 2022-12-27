@@ -1,7 +1,6 @@
 const Product = require("../models/product");
 
 exports.getProducts = (req, res, next) => {
-  //   const products = adminData.products;
   Product.fetchAll((products) => {
     res.render("shop/product-list", {
       prods: products,
@@ -9,10 +8,12 @@ exports.getProducts = (req, res, next) => {
       path: "/products",
     });
   });
+};
 
-  // console.log(adminData.products);
-  //res.sendFile(path.join(__dirname, "../", "views", "shop.html")); //Version 1
-  // res.sendFile(path.join(rootDir, "views", "shop.html")); // Version 2
+exports.getProduct = (req, res, next) => {
+  const prodId = req.params.productId;
+  console.log(prodId);
+  res.redirect("/");
 };
 
 exports.getIndex = (req, res, next) => {
