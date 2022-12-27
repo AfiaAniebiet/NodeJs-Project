@@ -15,19 +15,6 @@ const errorController = require("./controllers/error");
 
 const app = express();
 
-/*
-app.engine(
-  "hbs",
-  expressHbs({
-    layoutsDir: "views/layouts/",
-    defaultLayout: "main-layout",
-    extname: "hbs",
-  })
-);
-*/
-// app.set("view engine", "hbs");
-// app.set("view engine", "pug");
-
 // setting templating engine - ejs
 app.set("view engine", "ejs");
 app.set("views", "views");
