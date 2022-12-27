@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-// const products = [];
 
 const rootDir = require("../util/path");
 
@@ -25,6 +24,7 @@ module.exports = class Products {
   }
 
   save() {
+    this.id = Math.random().toString();
     getProductsFromFile((products) => {
       products.push(this);
       fs.writeFile(filePath, JSON.stringify(products), (error) => {
